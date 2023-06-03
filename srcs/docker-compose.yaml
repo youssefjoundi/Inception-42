@@ -1,0 +1,31 @@
+version: '3'
+services:
+
+  wordpress:
+    container_name: wordpress
+    build: ./requirements/wordpress
+    volumes:
+      - wp-content:/var/www/html/
+    networks:
+      - my-network
+  
+
+  nginx:
+    container_name: nginx
+    build: ./requirements/nginx
+    ports:
+      - 80:80
+    volumes:
+      - wp-content:/var/www/html/
+    depends_on:
+      - wordpress
+    networks:
+      - my-network
+
+
+volumes:
+  wp-content:
+
+
+networks:
+  my-network:
