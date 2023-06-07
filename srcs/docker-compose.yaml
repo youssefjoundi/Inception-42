@@ -4,6 +4,13 @@ services:
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpresspassword
+      WORDPRESS_DB_NAME: wordpress
+    
+    
     volumes:
       - wp-content:/var/www/html/
     networks:
@@ -23,9 +30,24 @@ services:
       - my-network
 
 
+  mariadb:
+    container_name: mariadb
+    build: ./requirements/mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: mysecretpassword
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpresspassword
+    volumes:
+      - mariadb-content:/var/lib/mysql
+    networks:
+      - my-network
+
+
+
 volumes:
   wp-content:
-
+  mariadb-content:
 
 networks:
   my-network:

@@ -66,9 +66,9 @@
     {
       "id": "pointer:pointer",
       "typeName": "pointer",
-      "x": 260.6900939941406,
-      "y": 347.7994689941406,
-      "lastActivityTimestamp": 1685800741061
+      "x": 183.57202362060548,
+      "y": 168.0859375,
+      "lastActivityTimestamp": 1686086720213
     },
     {
       "isPenMode": false,
@@ -76,7 +76,7 @@
       "isMobileMode": false,
       "isSnapMode": false,
       "lastUpdatedPageId": "page:h4Sl9ybjY5ZKMarUwbrj8",
-      "lastUsedTabId": "instance:CH43qtKwrjOAkdhTT64ny",
+      "lastUsedTabId": "instance:KT1Bbf6THlCG0vfehUI_e",
       "id": "user_document:C9ahwfIfynOI5XR5Rt0hI",
       "typeName": "user_document"
     },
@@ -148,11 +148,86 @@
       "typeName": "instance_page_state"
     },
     {
+      "followingUserId": null,
+      "propsForNextShape": {
+        "opacity": "1",
+        "color": "black",
+        "labelColor": "black",
+        "dash": "draw",
+        "fill": "none",
+        "size": "m",
+        "icon": "file",
+        "font": "draw",
+        "align": "middle",
+        "verticalAlign": "middle",
+        "geo": "rectangle",
+        "arrowheadStart": "none",
+        "arrowheadEnd": "arrow",
+        "spline": "line"
+      },
+      "brush": null,
+      "scribble": null,
+      "cursor": {
+        "type": "default",
+        "color": "black",
+        "rotation": 0
+      },
+      "isFocusMode": false,
+      "exportBackground": true,
+      "isDebugMode": false,
+      "isToolLocked": false,
+      "screenBounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1514,
+        "h": 945
+      },
+      "zoomBrush": null,
+      "id": "instance:KT1Bbf6THlCG0vfehUI_e",
+      "currentPageId": "page:h4Sl9ybjY5ZKMarUwbrj8",
+      "typeName": "instance"
+    },
+    {
+      "x": 422.5959451293945,
+      "y": 199.11328125,
+      "z": 1,
+      "id": "camera:q_kiy59_z7Av82jslAfQh",
+      "typeName": "camera"
+    },
+    {
+      "editingId": null,
+      "croppingId": null,
+      "selectedIds": [
+        "shape:608KXwxs2sZ-N6yU_y3hP",
+        "shape:9QSx_l5DlWIVnKC9iU9rH",
+        "shape:DEDIThzxayds4Km26aH66",
+        "shape:J2RjFjTBsTSNM0RxNWIWh",
+        "shape:MztH4IYDJK7HvEm9-Zchh",
+        "shape:N5zSd2SoSkaWDRsOiRuLs",
+        "shape:Z5tY3rDxyjhdpMvj8Bf1T",
+        "shape:a5FEgGSx66vAy8Bwo1omq",
+        "shape:jNMJiIjhxpjGHfEl6DBI4",
+        "shape:kIcbmB5o2Fr4WLS-YZhiE",
+        "shape:pVNU6f01KAZlXZQD96C-7",
+        "shape:r735KvujV7rFznA3KTB8z",
+        "shape:rf2XhNQR_0WmPWe2GiSHB",
+        "shape:vmriqNKUeRnektLTV0tpb"
+      ],
+      "hoveredId": null,
+      "erasingIds": [],
+      "hintingIds": [],
+      "focusLayerId": null,
+      "id": "instance_page_state:lw1Lasf08iSEInU1o-uxr",
+      "pageId": "page:h4Sl9ybjY5ZKMarUwbrj8",
+      "instanceId": "instance:KT1Bbf6THlCG0vfehUI_e",
+      "cameraId": "camera:q_kiy59_z7Av82jslAfQh",
+      "typeName": "instance_page_state"
+    },
+    {
       "x": 161.0677032470703,
       "y": 230.4296875,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:pVNU6f01KAZlXZQD96C-7",
       "type": "draw",
       "props": {
         "segments": [
@@ -278,6 +353,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "a1",
+      "id": "shape:pVNU6f01KAZlXZQD96C-7",
       "typeName": "shape"
     },
     {
@@ -285,7 +361,6 @@
       "y": 214.26431274414062,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:jNMJiIjhxpjGHfEl6DBI4",
       "type": "draw",
       "props": {
         "segments": [
@@ -471,6 +546,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "a2",
+      "id": "shape:jNMJiIjhxpjGHfEl6DBI4",
       "typeName": "shape"
     },
     {
@@ -478,7 +554,6 @@
       "y": 218.13150024414062,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:608KXwxs2sZ-N6yU_y3hP",
       "type": "draw",
       "props": {
         "segments": [
@@ -644,6 +719,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "a3",
+      "id": "shape:608KXwxs2sZ-N6yU_y3hP",
       "typeName": "shape"
     },
     {
@@ -651,7 +727,6 @@
       "y": 230.3515625,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:r735KvujV7rFznA3KTB8z",
       "type": "draw",
       "props": {
         "segments": [
@@ -712,6 +787,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "a4",
+      "id": "shape:r735KvujV7rFznA3KTB8z",
       "typeName": "shape"
     },
     {
@@ -719,7 +795,6 @@
       "y": 215.78125,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:rf2XhNQR_0WmPWe2GiSHB",
       "type": "draw",
       "props": {
         "segments": [
@@ -790,6 +865,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "a5",
+      "id": "shape:rf2XhNQR_0WmPWe2GiSHB",
       "typeName": "shape"
     },
     {
@@ -797,7 +873,6 @@
       "y": 232.3046875,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:DEDIThzxayds4Km26aH66",
       "type": "draw",
       "props": {
         "segments": [
@@ -1013,6 +1088,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "a6",
+      "id": "shape:DEDIThzxayds4Km26aH66",
       "typeName": "shape"
     },
     {
@@ -1020,7 +1096,6 @@
       "y": 224.63540649414062,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:MztH4IYDJK7HvEm9-Zchh",
       "type": "draw",
       "props": {
         "segments": [
@@ -1131,6 +1206,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "a7",
+      "id": "shape:MztH4IYDJK7HvEm9-Zchh",
       "typeName": "shape"
     },
     {
@@ -1138,7 +1214,6 @@
       "y": 221.6731719970703,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:9QSx_l5DlWIVnKC9iU9rH",
       "type": "draw",
       "props": {
         "segments": [
@@ -1189,6 +1264,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "a8",
+      "id": "shape:9QSx_l5DlWIVnKC9iU9rH",
       "typeName": "shape"
     },
     {
@@ -1196,7 +1272,6 @@
       "y": 208.3723907470703,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:Z5tY3rDxyjhdpMvj8Bf1T",
       "type": "draw",
       "props": {
         "segments": [
@@ -1367,6 +1442,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "a9",
+      "id": "shape:Z5tY3rDxyjhdpMvj8Bf1T",
       "typeName": "shape"
     },
     {
@@ -1374,7 +1450,6 @@
       "y": 322.34375,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:a5FEgGSx66vAy8Bwo1omq",
       "type": "draw",
       "props": {
         "segments": [
@@ -1590,6 +1665,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "aA",
+      "id": "shape:a5FEgGSx66vAy8Bwo1omq",
       "typeName": "shape"
     },
     {
@@ -1597,7 +1673,6 @@
       "y": 321.26953125,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:vmriqNKUeRnektLTV0tpb",
       "type": "draw",
       "props": {
         "segments": [
@@ -1738,6 +1813,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "aB",
+      "id": "shape:vmriqNKUeRnektLTV0tpb",
       "typeName": "shape"
     },
     {
@@ -1745,7 +1821,6 @@
       "y": 335.5924377441406,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:N5zSd2SoSkaWDRsOiRuLs",
       "type": "draw",
       "props": {
         "segments": [
@@ -1801,6 +1876,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "aC",
+      "id": "shape:N5zSd2SoSkaWDRsOiRuLs",
       "typeName": "shape"
     },
     {
@@ -1808,7 +1884,6 @@
       "y": 329.13409423828125,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:J2RjFjTBsTSNM0RxNWIWh",
       "type": "draw",
       "props": {
         "segments": [
@@ -1909,6 +1984,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "aD",
+      "id": "shape:J2RjFjTBsTSNM0RxNWIWh",
       "typeName": "shape"
     },
     {
@@ -1916,7 +1992,6 @@
       "y": 328.671875,
       "rotation": 0,
       "isLocked": false,
-      "id": "shape:kIcbmB5o2Fr4WLS-YZhiE",
       "type": "draw",
       "props": {
         "segments": [
@@ -2102,6 +2177,7 @@
       },
       "parentId": "page:h4Sl9ybjY5ZKMarUwbrj8",
       "index": "aE",
+      "id": "shape:kIcbmB5o2Fr4WLS-YZhiE",
       "typeName": "shape"
     }
   ]
