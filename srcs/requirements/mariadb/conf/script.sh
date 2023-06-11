@@ -15,5 +15,9 @@ echo "## Give user privileges to database ..."
 mysql -e "GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'%';"
 
 echo "## Run mysql server in foreground"
+
+#Shutdown script
 #service mysql stop
+
+
 #mysqld
