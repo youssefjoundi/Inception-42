@@ -2,7 +2,7 @@ FROM debian:buster
 
 RUN apt-get update
 
-RUN apt-get install -y mariadb-server
+RUN apt-get install -y mariadb-server vim
 
 COPY ./conf/script.sh .
 
@@ -12,4 +12,4 @@ RUN chmod +x script.sh
 
 EXPOSE 3306
 
-CMD ["tail", "-f"]
+CMD ["bash", "script.sh"]
