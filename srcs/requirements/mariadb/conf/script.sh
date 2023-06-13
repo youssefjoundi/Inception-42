@@ -21,8 +21,4 @@ mysql -u root -p$MYSQL_ROOT_PASSWORD -e "GRANT ALL PRIVILEGES ON wordpress.* TO 
 #Shut dowm mysql
 mysqladmin -u root -p$MYSQL_ROOT_PASSWORD shutdown
 
-echo "## Run mysql server in foreground"
-mysqld
-
-
 

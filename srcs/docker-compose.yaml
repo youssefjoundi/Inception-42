@@ -1,19 +1,7 @@
 version: '3'
 services:
 
-  wordpress:
-    container_name: wordpress
-    build: ./requirements/wordpress
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpresspassword
-      WORDPRESS_DB_NAME: wordpress
-    volumes:
-      - wp-content:/var/www/html/
-    networks:
-      - my-network
-  
+
 
   nginx:
     container_name: nginx
@@ -38,6 +26,23 @@ services:
       MYSQL_PASSWORD: wordpresspassword
     volumes:
       - mariadb-content:/var/lib/mysql
+    networks:
+      - my-network
+
+  wordpress:
+    container_name: wordpress
+    build: ./requirements/wordpress
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpresspassword
+      WORDPRESS_DB_NAME: wordpress
+
+    depends_on:
+      - mariadb
+
+    volumes:
+      - wp-content:/var/www/html/
     networks:
       - my-network
 
