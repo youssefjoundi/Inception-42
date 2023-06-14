@@ -1,13 +1,12 @@
 version: '3'
+
 services:
-
-
 
   nginx:
     container_name: nginx
     build: ./requirements/nginx
     ports:
-      - "80:80"
+      - "443:443"
     volumes:
       - wp-content:/var/www/html/
     depends_on:
@@ -18,12 +17,14 @@ services:
 
   mariadb:
     container_name: mariadb
-    build: ./requirements/mariadb
-    environment:
-      MYSQL_ROOT_PASSWORD: mysecretpassword
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpresspassword
+    env_file: .env
+    build:
+      context: ./requirements/mariadb
+      args:
+        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_DATABASE=${MYSQL_DATABASE}
     volumes:
       - mariadb-content:/var/lib/mysql
     networks:
@@ -31,15 +32,24 @@ services:
 
   wordpress:
     container_name: wordpress
-    build: ./requirements/wordpress
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpresspassword
-      WORDPRESS_DB_NAME: wordpress
+    env_file: .env
+    build:
+      context: ./requirements/wordpress
 
     depends_on:
       - mariadb
+
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MY_SQL_HOST=${MY_SQL_HOST}
+      - WORDPRESS_ADMIN=${WORDPRESS_ADMIN}
+      - PASSWORD_ADMIN=${PASSWORD_ADMIN}
+      - EMAIL_ADMIN=${EMAIL_ADMIN}
+      - WORDPRESS_USER=${WORDPRESS_USER}
+      - PASSWORD_USER=${PASSWORD_USER}
+      - EMAIL_USER=${EMAIL_USER}
 
     volumes:
       - wp-content:/var/www/html/
@@ -50,6 +60,11 @@ services:
 
 volumes:
   wp-content:
+    driver: local
+    driver_opts:
+      type: none
+      o : bind
+      device: /Users/yojoundi/Desktop/Inception-42/srcs/wp-content
   mariadb-content:
 
 networks:
