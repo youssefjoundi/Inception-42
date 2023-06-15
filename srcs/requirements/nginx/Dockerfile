@@ -2,9 +2,9 @@ FROM debian:buster
 
 RUN apt-get update
 
-RUN apt-get install -y nginx
+RUN apt-get install -y nginx openssl
 
-COPY ./certificate.crt ./private.key ./
+COPY ./conf/create_certif.sh ./
 
 COPY ./conf/default /etc/nginx/sites-available
 
