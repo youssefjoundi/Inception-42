@@ -1,0 +1,9 @@
+ docker run \                                                                                                       ─╯
+        --detach \
+        --env FTP_PASS=123 \
+        --env FTP_USER=user \
+        --name my-ftp \
+        --publish 20-21:20-21/tcp \
+        --publish 40000-40009:40000-40009/tcp \
+        --volume /Users/yojoundi/Desktop/Inception-42/data:/home/user \
+        garethflowers/ftp-server
