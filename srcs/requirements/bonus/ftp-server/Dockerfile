@@ -1,18 +1,19 @@
-# Use a base image
-FROM ubuntu:latest
+FROM debian:buster
 
-# Install necessary packages
-RUN apt-get update && \
-    apt-get install -y vsftpd
+RUN apt-get update \
+    && apt-get install -y vsftpd
 
-# Copy configuration file
-COPY vsftpd.conf /etc/vsftpd.conf
+COPY ./vsftpd.conf /etc/vsftpd.conf
 
 
-RUN service start
+RUN useradd -m ftpuser \
+    && echo 'ftpuser:password' | chpasswd \
+    && mkdir -p /var/run/vsftpd/empty \
+    && echo "ftpuser" >> /etc/vsftpd.chroot_list
 
-# Expose FTP port
-EXPOSE 21
 
-# Start the FTP server
-CMD ["bash", "docker-entrypoint.sh"]
+# Expose FTP ports
+EXPOSE 20 21 21100-21110
+
+# Start vsftpd service
+CMD /usr/sbin/vsftpd
