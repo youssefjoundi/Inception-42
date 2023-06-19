@@ -2,7 +2,7 @@ FROM debian:buster
 
 RUN apt-get update
 
-RUN apt-get install -y mariadb-server vim
+RUN apt-get install -y mariadb-server
 
 COPY ./conf/script.sh .
 COPY ./conf/my.cnf /etc/mysql

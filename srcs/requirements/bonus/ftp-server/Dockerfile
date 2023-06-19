@@ -6,14 +6,10 @@ RUN apt-get update \
 COPY ./vsftpd.conf /etc/vsftpd.conf
 
 
-RUN useradd -m ftpuser \
-    && echo 'ftpuser:password' | chpasswd \
-    && mkdir -p /var/run/vsftpd/empty \
-    && echo "ftpuser" >> /etc/vsftpd.chroot_list
-
+COPY ./script.sh ./
 
 # Expose FTP ports
 EXPOSE 20 21 21100-21110
 
 # Start vsftpd service
-CMD /usr/sbin/vsftpd
+CMD ["bash", "script.sh"]

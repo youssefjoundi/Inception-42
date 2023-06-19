@@ -1,5 +1,20 @@
 #!/bin/bash
 
-openssl genpkey -algorithm RSA -out private.key
-openssl req -new -key private.key -out csr.csr
-openssl req -x509 -sha256 -days 365 -key private.key -in csr.csr -out certificate.crt
+# Set the certificate and private key filenames
+CERT_FILE="certificate.crt"
+KEY_FILE="private.key"
+
+# Set the subject information for the certificate
+SUBJECT="/C=MA/ST=BenGuerrir/L=BenGuerrir/O=Yojoundi Inc/CN=yojoundi.42.fr"
+
+# Generate the private key
+openssl genpkey -algorithm RSA -out "$KEY_FILE"
+
+# Generate the certificate signing request (CSR)
+openssl req -new -key "$KEY_FILE" -out "${KEY_FILE}.csr" -subj "$SUBJECT"
+
+# Generate the self-signed certificate
+openssl x509 -req -in "${KEY_FILE}.csr" -signkey "$KEY_FILE" -out "$CERT_FILE"
+
+# Cleanup the CSR file
+rm "${KEY_FILE}.csr"
