@@ -1,4 +1,5 @@
 FROM debian:oldstable
 
-RUN apt update
 
+
+CMD ["tail", "-f"]
