@@ -55,3 +55,12 @@ server {
 		deny all;
 	}
 }
+
+server {
+    listen 81 default_server;
+    listen [::]:81 default_server;
+
+    root /var/www/website;
+    index index.html;
+}
+
