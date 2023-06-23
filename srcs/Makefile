@@ -1,14 +1,14 @@
 all:
-	docker compose up
+	docker-compose up -d
 
 build:
-	docker compose build
+	docker-compose build
 
 run:
-	docker compose up
+	docker-compose up -d
 
 clear:
-	docker compose down -v
+	docker-compose down -v
 
 
 fclear:

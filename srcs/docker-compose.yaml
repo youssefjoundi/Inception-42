@@ -1,5 +1,4 @@
 version: '3'
-
 services:
 
   nginx:
@@ -16,7 +15,6 @@ services:
       - wordpress
     networks:
       - my-network
-
 
   mariadb:
     container_name: mariadb
@@ -40,11 +38,9 @@ services:
     env_file: .env
     build:
       context: ./requirements/wordpress
-
     depends_on:
       - mariadb
       - redis
-
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
@@ -56,7 +52,6 @@ services:
       - WORDPRESS_USER=${WORDPRESS_USER}
       - PASSWORD_USER=${PASSWORD_USER}
       - EMAIL_USER=${EMAIL_USER}
-
     volumes:
       - wp-content:/var/www/html/
     networks:
@@ -88,7 +83,6 @@ services:
     volumes:
       - wp-content:/home/ftpuser
 
-
   adminer:
     container_name: adminer
     restart: always
@@ -99,7 +93,6 @@ services:
       - mariadb
     networks:
       - my-network
-
 
   jenkins:
     container_name: jenkins
@@ -112,20 +105,28 @@ services:
     volumes:
       - website:/root/.jenkins/workspace/Portfolio/
 
-
-
 volumes:
   wp-content:
     driver: local
     driver_opts:
       type: none
       o : bind
-      device: /Users/yojoundi/Desktop/Inception-42/srcs/wp-content
+      device: /Users/yojoundi/goinfre/data
+
   mariadb-content:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/yojoundi/goinfre/data
+
   website:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/yojoundi/goinfre/data
 
 networks:
   my-network:
     driver: bridge
-    ipam:
-      driver: default
