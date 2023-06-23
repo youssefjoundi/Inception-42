@@ -1,8 +1,8 @@
 FROM debian:latest
 
-RUN apt update && apt upgrade
-
-RUN apt install adminer -y
+RUN apt-get update \
+    && apt-get upgrade \
+    && apt-get install adminer -y
 
 WORKDIR /usr/share/adminer/
 

@@ -1,6 +1,7 @@
 FROM debian:oldstable
 
-RUN apt update && apt install -y redis-server
+RUN apt-get update \
+    && apt-get install -y redis-server
 
 EXPOSE 6379
 
