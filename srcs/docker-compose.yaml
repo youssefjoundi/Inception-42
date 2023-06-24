@@ -111,21 +111,21 @@ volumes:
     driver_opts:
       type: none
       o : bind
-      device: /Users/yojoundi/goinfre/data
+      device: /home/yojoundi/data/wordpress
 
   mariadb-content:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /Users/yojoundi/goinfre/data
+      device: /home/yojoundi/data/mariadb
 
   website:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /Users/yojoundi/goinfre/data
+      device: /home/yojoundi/data/website
 
 networks:
   my-network:

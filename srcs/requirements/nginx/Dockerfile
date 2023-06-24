@@ -10,5 +10,6 @@ RUN apt-get update \
 COPY ./conf/default /etc/nginx/sites-available
 
 CMD ["nginx", "-g", "daemon off;"]
+# CMD [ "tail", "-f" ]
 
 
