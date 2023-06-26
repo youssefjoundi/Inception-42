@@ -107,25 +107,25 @@ services:
 
 volumes:
   wp-content:
-    driver: local
-    driver_opts:
-      type: none
-      o : bind
-      device: /home/yojoundi/data/wordpress
+#    driver: local
+#    driver_opts:
+#      type: none
+#      o : bind
+#      device: /home/yojoundi/data/wordpress
 
   mariadb-content:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/yojoundi/data/mariadb
+#    driver: local
+#    driver_opts:
+#      type: none
+#      o: bind
+#      device: /home/yojoundi/data/mariadb
 
   website:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /home/yojoundi/data/website
+#    driver: local
+#    driver_opts:
+#      type: none
+#      o: bind
+#      device: /home/yojoundi/data/website
 
 networks:
   my-network:

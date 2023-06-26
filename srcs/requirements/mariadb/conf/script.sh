@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "## Start Mysql service....."
-service mariadb start
+service mysql start
 
 # Set password to the root
 mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$MYSQL_ROOT_PASSWORD';\

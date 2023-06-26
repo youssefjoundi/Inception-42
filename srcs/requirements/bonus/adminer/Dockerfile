@@ -1,18 +1,16 @@
-FROM debian:latest
+FROM debian:buster
 
-RUN apt-get update \
-    && apt-get upgrade \
-    && apt-get install adminer -y
+RUN apt update && apt upgrade
+
+RUN apt install adminer -y
 
 WORKDIR /usr/share/adminer/
 
 RUN ./compile.php \
     && mv adminer-*.php adminer.php \
-    && echo "Alias / /usr/share/adminer/adminer.php" | tee /etc/apache2/conf-available/adminer.conf \
+    && echo "Alias /adminer.php /usr/share/adminer/adminer.php" | tee /etc/apache2/conf-available/adminer.conf \
     && a2enconf adminer.conf
 
 EXPOSE 80
 
 CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
-
-CMD [ "tail", "-f" ]

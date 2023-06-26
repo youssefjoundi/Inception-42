@@ -14,4 +14,4 @@ wp --allow-root user create "$WORDPRESS_USER" "$EMAIL_USER" \
    --role=author --user_pass="$PASSWORD_USER"
 
 
-php-fpm7.4 -F
+php-fpm7.3 -F
