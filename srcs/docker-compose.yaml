@@ -28,7 +28,7 @@ services:
         - MYSQL_PASSWORD=${MYSQL_PASSWORD}
         - MYSQL_DATABASE=${MYSQL_DATABASE}
     volumes:
-      - mariadb-content:/var/lib/mysql
+      - mariadb-content:/var/lib/mysql/
     networks:
       - my-network
 
@@ -81,7 +81,7 @@ services:
       - "21:21"
       - "21100-21110:21100-21110"
     volumes:
-      - wp-content:/home/ftpuser
+      - wp-content:/home/ftpuser/
 
   adminer:
     container_name: adminer
@@ -107,25 +107,25 @@ services:
 
 volumes:
   wp-content:
-#    driver: local
-#    driver_opts:
-#      type: none
-#      o : bind
-#      device: /home/yojoundi/data/wordpress
+    driver: local
+    driver_opts:
+      type: none
+      o : bind
+      device: /Users/yojoundi/Desktop/wordpress
 
   mariadb-content:
-#    driver: local
-#    driver_opts:
-#      type: none
-#      o: bind
-#      device: /home/yojoundi/data/mariadb
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/yojoundi/Desktop/mariadb
 
   website:
-#    driver: local
-#    driver_opts:
-#      type: none
-#      o: bind
-#      device: /home/yojoundi/data/website
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/yojoundi/Desktop/website
 
 networks:
   my-network:
