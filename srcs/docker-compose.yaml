@@ -13,6 +13,8 @@ services:
       - website:/var/www/website/
     depends_on:
       - wordpress
+    args:
+      - SITE_HOSTNAME=${SITE_HOSTNAME}
     networks:
       - my-network
 

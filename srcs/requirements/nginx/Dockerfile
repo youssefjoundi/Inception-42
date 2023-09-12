@@ -6,6 +6,9 @@ RUN apt-get install -y nginx openssl
 
 COPY ./conf/create_certif.sh ./
 
+ARG SITE_HOSTNAME
+
+
 RUN bash create_certif.sh \
     && mkdir /var/www/website
 
