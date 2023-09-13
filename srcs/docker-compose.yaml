@@ -4,7 +4,10 @@ services:
   nginx:
     container_name: nginx
     restart: always
-    build: ./requirements/nginx
+    build: 
+      context: ./requirements/nginx
+      args:
+        - SITE_HOSTNAME=${SITE_HOSTNAME}
     ports:
       - "443:443"
       - "81:81"
@@ -13,8 +16,7 @@ services:
       - website:/var/www/website/
     depends_on:
       - wordpress
-    args:
-      - SITE_HOSTNAME=${SITE_HOSTNAME}
+    
     networks:
       - my-network
 
