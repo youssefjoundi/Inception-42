@@ -5,7 +5,7 @@ CERT_FILE="certificate.crt"
 KEY_FILE="private.key"
 
 # Set the subject information for the certificate
-SUBJECT="/C=MA/ST=BenGuerrir/L=BenGuerrir/O=Yojoundi Inc/CN=yojoundi.42.fr"
+SUBJECT="/C=MA/ST=BenGuerrir/L=BenGuerrir/O=Yojoundi Inc/CN=SITE_HOSTNAME"
 
 # Generate the private key
 openssl genpkey -algorithm RSA -out "$KEY_FILE"

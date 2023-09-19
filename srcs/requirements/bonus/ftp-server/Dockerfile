@@ -9,7 +9,7 @@ COPY ./vsftpd.conf /etc/vsftpd.conf
 COPY ./script.sh ./
 
 # Expose FTP ports
-EXPOSE 20 21 21100-21110
+EXPOSE 21
 
 # Start vsftpd service
 CMD ["bash", "script.sh"]

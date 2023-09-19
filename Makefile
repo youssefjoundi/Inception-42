@@ -15,3 +15,5 @@ clear:
 
 fclear:
 	docker system prune -a
+
+re:
