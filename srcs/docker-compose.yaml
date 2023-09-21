@@ -45,17 +45,6 @@ services:
     depends_on:
       - mariadb
       - redis
-    environment:
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MY_SQL_HOST=${MY_SQL_HOST}
-      - WORDPRESS_ADMIN=${WORDPRESS_ADMIN}
-      - PASSWORD_ADMIN=${PASSWORD_ADMIN}
-      - EMAIL_ADMIN=${EMAIL_ADMIN}
-      - WORDPRESS_USER=${WORDPRESS_USER}
-      - PASSWORD_USER=${PASSWORD_USER}
-      - EMAIL_USER=${EMAIL_USER}
     volumes:
       - wp-content:/var/www/html/
     networks:
@@ -74,7 +63,6 @@ services:
     restart: always
     build:
       context: ./requirements/bonus/ftp-server
-    env_file: .env
     environment:
       - FTP_USER=${FTP_USER}
       - FTP_PASS=${FTP_PASS}
@@ -82,8 +70,10 @@ services:
       - wordpress
     ports:
       - "21:21"
+    networks:
+      - my-network
     volumes:
-      - wp-content:/home/ftpuser/
+      - wp-content:/home/$FTP_USER/
 
   adminer:
     container_name: adminer

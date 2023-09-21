@@ -5,7 +5,8 @@ CERT_FILE="certificate.crt"
 KEY_FILE="private.key"
 
 # Set the subject information for the certificate
-SUBJECT="/C=MA/ST=BenGuerrir/L=BenGuerrir/O=Yojoundi Inc/CN=SITE_HOSTNAME"
+SUBJECT="/C=MA/ST=BenGuerrir/L=BenGuerrir/O=Yojoundi Inc/CN=$SITE_HOSTNAME"
+echo "**************$SITE_HOSTNAME******";
 
 # Generate the private key
 openssl genpkey -algorithm RSA -out "$KEY_FILE"
@@ -17,4 +18,4 @@ openssl req -new -key "$KEY_FILE" -out "${KEY_FILE}.csr" -subj "$SUBJECT"
 openssl x509 -req -in "${KEY_FILE}.csr" -signkey "$KEY_FILE" -out "$CERT_FILE"
 
 # Cleanup the CSR file
-rm "${KEY_FILE}.csr"
+rm "${KEY_FILE}.csr" create_certif.sh

@@ -1,12 +1,14 @@
-wp plugin install redis-cache --activate
-wp redis enable
-wp config set WP_REDIS_HOST your_redis_host
-wp config set WP_REDIS_PORT your_redis_port
+wp --allow-root plugin install redis-cache --activate
+wp --allow-root redis enable
+wp --allow-root config set WP_REDIS_HOST your_redis_host
+wp --allow-root config set WP_REDIS_PORT your_redis_port
 # wp config set WP_REDIS_PASSWORD your_redis_password // optional
 
-wp redis status
+wp --allow-root redis status
 
-wp redis flush
+# define('WP_CACHE', true);
+
+# wp redis flush
 
 
 

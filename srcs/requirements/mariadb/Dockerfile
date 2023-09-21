@@ -1,8 +1,7 @@
 FROM debian:oldstable
 
-RUN apt-get update
-
-RUN apt-get install -y mariadb-server
+RUN apt-get update && \
+    apt-get install -y mariadb-server
 
 COPY ./conf/script.sh .
 COPY ./conf/my.cnf /etc/mysql
@@ -12,11 +11,6 @@ ARG MYSQL_DATABASE
 ARG MYSQL_USER
 ARG MYSQL_PASSWORD
 
-
-ENV MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} \
-    MYSQL_DATABASE=${MYSQL_DATABASE} \
-    MYSQL_USER=${MYSQL_USER} \
-    MYSQL_PASSWORD=${MYSQL_PASSWORD}
 
 RUN bash script.sh
 
