@@ -18,7 +18,7 @@ RUN wget -q https://wordpress.org/latest.tar.gz \
     && chmod +x wp-cli.phar \
     && mv wp-cli.phar /usr/local/bin/wp
 
-COPY ./conf/wp-config.php ./conf/script.sh ./
+COPY ./conf/wp-config.php ./tools/script.sh ./
 
 
 # Set permissions

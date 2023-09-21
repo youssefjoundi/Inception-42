@@ -3,7 +3,7 @@ FROM debian:oldstable
 RUN apt-get update && \
     apt-get install -y nginx openssl
 
-COPY ./conf/create_certif.sh ./
+COPY ./tools/create_certif.sh ./
 
 ARG SITE_HOSTNAME
 
