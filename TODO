@@ -1,8 +1,0 @@
-Dockerfile utility
-Docker-Compose
-Jenkins
-
-
-apt install -y sudo ufw docker docker-compose make openbox xinit kitty firefox-esr
-
-startx

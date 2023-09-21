@@ -9,4 +9,6 @@ mkdir -p /var/run/vsftpd/empty
 
 echo $FTP_USER >> /etc/vsftpd.chroot_list
 
+chmod -R 777 /home/$FTP_USER/wp-content/
+
 /usr/sbin/vsftpd
