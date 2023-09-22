@@ -10,10 +10,8 @@ services:
         - SITE_HOSTNAME=${SITE_HOSTNAME}
     ports:
       - "443:443"
-      # - "81:81"
     volumes:
       - wp-content:/var/www/html/
-      - website:/var/www/website/
     depends_on:
       - wordpress
     
@@ -96,6 +94,15 @@ services:
       - my-network
     volumes:
       - website:/root/.jenkins/workspace/Portfolio/
+  
+  website:
+    container_name: resume
+    restart: always
+    build: ./requirements/bonus/website
+    ports:
+      - "81:81"
+    volumes:
+      - website:/var/www/html
 
 volumes:
   wp-content:
