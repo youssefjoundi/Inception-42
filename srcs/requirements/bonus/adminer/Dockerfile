@@ -1,6 +1,6 @@
 FROM debian:oldstable
 
-RUN apt update && apt upgrade
+RUN apt update && apt upgrade \
     && apt install adminer -y
 
 WORKDIR /usr/share/adminer/
