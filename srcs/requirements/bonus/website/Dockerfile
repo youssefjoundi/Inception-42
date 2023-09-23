@@ -1,10 +1,11 @@
 FROM debian:oldoldstable
 
 RUN apt-get update \
-    && apt-get install -y nginx
+    && apt-get install -y nginx \
+    && mkdir -p /var/www/website
 
 
-COPY ./tools/* /var/www/html
+COPY ./tools/website /var/www/website
 
 COPY ./conf/default /etc/nginx/sites-available
 
