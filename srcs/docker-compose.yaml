@@ -2,6 +2,7 @@ version: '3'
 services:
 
   nginx:
+    image: nginx 
     container_name: nginx
     restart: always
     build: 
@@ -19,6 +20,7 @@ services:
       - my-network
 
   mariadb:
+    image: mariadb
     container_name: mariadb
     restart: always
     env_file: .env
@@ -35,6 +37,7 @@ services:
       - my-network
 
   wordpress:
+    image: wordpress
     container_name: wordpress
     restart: always
     env_file: .env
@@ -60,6 +63,7 @@ services:
       - my-network
 
   redis:
+    image: redis
     container_name: redis
     restart: always
     build:
@@ -68,6 +72,7 @@ services:
       - my-network
 
   ftp-server:
+    image: ftp-server
     container_name: ftp-server
     restart: always
     build:
@@ -85,6 +90,7 @@ services:
       - wp-content:/home/$FTP_USER/
 
   adminer:
+    image: adminer
     container_name: adminer
     restart: always
     build: ./requirements/bonus/adminer
@@ -96,6 +102,7 @@ services:
       - my-network
 
   jenkins:
+    image: jenkins
     container_name: jenkins
     restart: always
     build: ./requirements/bonus/jenkins
@@ -108,12 +115,15 @@ services:
       - website:/root/.jenkins/workspace/Portfolio/
   
   website:
+    image: website
     container_name: resume
     restart: always
     build: ./requirements/bonus/website
     ports:
       - "81:81"
       - "8081:8081"
+    networks:
+      - my-network
     volumes:
       - website:/var/www/html
 

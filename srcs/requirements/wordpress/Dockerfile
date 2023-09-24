@@ -5,7 +5,7 @@ RUN apt-get update
 
 RUN mkdir /run/php/
 
-RUN apt-get install -y php7.4-fpm php7.4-mysql wget curl vim
+RUN apt-get install -y php7.4-fpm php7.4-mysql wget curl
 
 WORKDIR /var/www/html
 
@@ -19,13 +19,5 @@ RUN wget -q https://wordpress.org/latest.tar.gz \
     && mv wp-cli.phar /usr/local/bin/wp
 
 COPY ./conf/wp-config.php ./tools/script.sh ./
-
-
-# Set permissions
-#RUN chown -R www-data:www-data /var/www/html && \
-#    find /var/www/html -type d -exec chmod 755 {} \; && \
-#    find /var/www/html -type f -exec chmod 644 {} \;
-
-# EXPOSE 9000
 
 CMD ["bash", "script.sh"]
