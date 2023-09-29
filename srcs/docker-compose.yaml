@@ -128,7 +128,7 @@ services:
       - website:/var/www/html
 
 volumes:
-  wp-content:
+  wp-content: 
     driver: local
     driver_opts:
       type: none
@@ -157,4 +157,5 @@ volumes:
 
 networks:
   my-network:
+    name: my-custom-network
     driver: bridge
