@@ -6,12 +6,12 @@ This README provides a brief guide on how to get started with Docker, a platform
 ## Table of Contents
 - [What is Docker?](#what-is-docker)
 - [Installation](#installation)
-- [Usage](#usage)
+<!---- [Usage](#usage)
 - [Docker Basics](#docker-basics)
 - [Dockerfile](#dockerfile)
 - [Docker Compose](#docker-compose)
 - [Cleanup](#cleanup)
-- [Additional Resources](#additional-resources)
+- [Additional Resources](#additional-resources)-->
 
 ## What is Docker?
 
@@ -32,4 +32,4 @@ Once Docker is installed, you can start using it. Here are some common Docker co
 ### Check Docker Version
 
 ```bash
-docker --version
+make
