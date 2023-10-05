@@ -25,11 +25,14 @@ To get started with Docker, you need to install Docker on your system. Follow th
 - [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/)
 - [Docker Engine for Linux](https://docs.docker.com/engine/install/)
 
+## Project Structure
+
+
 ## Usage
 
 Once Docker is installed, you can start using it. Here are some common Docker commands:
 
-### Check Docker Version
+### Build and run the containers
 
 ```bash
 make
