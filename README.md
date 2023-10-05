@@ -6,8 +6,9 @@ This README provides a brief guide on how to get started with Docker, a platform
 ## Table of Contents
 - [What is Docker?](#what-is-docker)
 - [Installation](#installation)
-<!---- [Usage](#usage)
-- [Docker Basics](#docker-basics)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+<!---- [Docker Basics](#docker-basics)
 - [Dockerfile](#dockerfile)
 - [Docker Compose](#docker-compose)
 - [Cleanup](#cleanup)
@@ -26,6 +27,9 @@ To get started with Docker, you need to install Docker on your system. Follow th
 - [Docker Engine for Linux](https://docs.docker.com/engine/install/)
 
 ## Project Structure
+<div align="center">
+<img src="https://raw.githubusercontent.com/youssefjoundi/Inception-42/master/Screenshot%20from%202023-10-05%2002-07-34.png" align="center" style="width: 100%" />
+</div>  
 
 
 ## Usage
