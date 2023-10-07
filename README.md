@@ -40,3 +40,9 @@ Once Docker is installed, you can start using it. Here are some common Docker co
 
 ```bash
 make
+### Remove the running containers
+```bash
+make clear
+### Clear cache and remove all volumes 
+```bash
+make fclear
