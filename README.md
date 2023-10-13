@@ -8,11 +8,6 @@ This README provides a brief guide on how to get started with Docker, a platform
 - [Installation](#installation)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
-<!---- [Docker Basics](#docker-basics)
-- [Dockerfile](#dockerfile)
-- [Docker Compose](#docker-compose)
-- [Cleanup](#cleanup)
-- [Additional Resources](#additional-resources)-->
 
 ## What is Docker?
 
