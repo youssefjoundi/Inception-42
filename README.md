@@ -6,6 +6,7 @@ This README provides a brief guide on how to get started with Docker, a platform
 ## Table of Contents
 - [What is Docker?](#what-is-docker)
 - [Installation](#installation)
+- [Project Description](#project-description)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 
@@ -24,7 +25,12 @@ To get started with Docker, you need to install Docker on your system. Follow th
 ## Project Structure
 <div align="center">
 <img src="https://raw.githubusercontent.com/youssefjoundi/Inception-42/master/Screenshot%20from%202023-10-05%2002-07-34.png" align="center" style="width: 100%" />
-</div>  
+</div>
+
+## Project Description
+<p>
+  This project aim to create a microservices system to host website using wordpress and separate each service in single container like the example above.
+</p>
 
 
 ## Usage
